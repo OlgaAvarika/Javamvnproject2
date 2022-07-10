@@ -9,6 +9,7 @@ public class SQRServiceTest {
     @CsvFileSource(files = "src/test/resources/sqr.csv")
     public void shouldCalcExact(int expected, int num1, int num2) {
         SQRService service = new SQRService();
+
         int actual = service.calcSqrt(num1, num2);
 
         Assertions.assertEquals(expected, actual);
